@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Base_Object.cpp" />
+    <ClCompile Include="Common_Function.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_Object.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base_Object.h" />
+    <ClInclude Include="Common_Function.h" />
+    <ClInclude Include="main_Object.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
