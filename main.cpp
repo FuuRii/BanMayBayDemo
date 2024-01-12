@@ -1,5 +1,6 @@
 
 #include "Common_Function.h"
+#include "main_Object.h"
 
 bool Init() {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
@@ -45,13 +46,14 @@ int main(int argc, char* argv[]) {
 	SDL_CommonFunc::ApplySurface(g_bg, g_screen, 0, 0);
 	printf("Success : Apply background thanh cong \n");
 
-	//g_plane = LoadImage("Img/Picture2.png");
-	//if (g_plane == NULL) {
-	//	printf("ERROR : Load object fail !\n");
-	//	exit(-1);
-	//}
-	/*ApplySurface(g_plane, g_screen, 190, 668);
-	printf("Success : Apply object thanh cong \n");*/
+
+	MainObject plane_object;
+	plane_object.SetRect(190, 668);
+	bool ret = plane_object.LoadImg("Img/Picture2.png");
+	if (ret == false) {
+		return 0;
+	}
+	plane_object.Show(g_screen);
 
 
 	while (!is_quit) {
