@@ -20,7 +20,7 @@ void BaseObject::Show(SDL_Surface* des) {
 }
 
 bool BaseObject::LoadImg(const char* file_name) {
-	p_object_ = SDL_CommonFunc::LoadImageW(file_name);
+	p_object_ = SDL_CommonFunc::LoadImage(file_name);
 	if (p_object_ == NULL)
 		return false;
 	return true;

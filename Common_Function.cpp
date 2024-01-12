@@ -2,7 +2,7 @@
 #include "Common_Function.h"
 
 //dinh nghia 1 ham surface de load hinh anh
-SDL_Surface* LoadImageW(std::string file_path) {
+SDL_Surface* SDL_CommonFunc::LoadImage(std::string file_path) {
 	SDL_Surface* load_image = NULL;
 	SDL_Surface* optimize_image = NULL;
 	//load anh vao bang cach lay ten cua tam anh do
@@ -21,7 +21,7 @@ SDL_Surface* LoadImageW(std::string file_path) {
 	return optimize_image;
 }
 
-void ApplySurface(SDL_Surface* src, SDL_Surface* des, int x, int y) {
+void SDL_CommonFunc::ApplySurface(SDL_Surface* src, SDL_Surface* des, int x, int y) {
 	SDL_Rect offset;
 	offset.x = x;
 	offset.y = y;
@@ -29,7 +29,7 @@ void ApplySurface(SDL_Surface* src, SDL_Surface* des, int x, int y) {
 	SDL_BlitSurface(src, NULL, des, &offset);
 }
 
-void CleanUp() {
+void SDL_CommonFunc::CleanUp() {
 	SDL_FreeSurface(g_screen);
 	printf("Success : Giai phong g_screen\n");
 	SDL_FreeSurface(g_bg);

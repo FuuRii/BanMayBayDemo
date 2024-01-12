@@ -6,6 +6,8 @@
 #include <Windows.h>
 #include <string>
 #include <SDL_image.h>
+#include <SDL_video.h>
+
 #include <stdio.h>
 #include <random>
 #include <ctime>
@@ -20,7 +22,7 @@ static SDL_Surface* g_bg = NULL;
 static SDL_Event g_event;
 
 namespace SDL_CommonFunc {
-	SDL_Surface* LoadImageW(std::string file_path);
+	SDL_Surface* LoadImage(std::string file_path);
 	void ApplySurface(SDL_Surface* src, SDL_Surface* des, int x, int y);
 	void CleanUp();
 }

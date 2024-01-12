@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 		printf("Success : Khoi tao man hinh thanh cong %d x %d\n", SCREEN_WIDTH, SCREEN_HEIGHT);
 	}
 
-	g_bg = SDL_CommonFunc::LoadImageW("Img/bl1.jpg");
+	g_bg = SDL_CommonFunc::LoadImage("Img/bl1.jpg");
 	if (g_bg == NULL) {
 		printf("ERROR : Load background that bai !\n");
 		exit(-1);
