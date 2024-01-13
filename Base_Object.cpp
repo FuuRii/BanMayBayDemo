@@ -8,8 +8,7 @@ BaseObject::BaseObject() {
 }
 BaseObject :: ~BaseObject() {
 	if (p_object_ != NULL) {
-		delete p_object_;
-		p_object_ = NULL;
+		SDL_FreeSurface(p_object_);
 	}
 }
 

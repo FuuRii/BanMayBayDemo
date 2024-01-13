@@ -1,12 +1,13 @@
 
+
 #ifndef MAIN_OBJECT_H_
 #define MAIN_OBJECT_H
 
+const int WIDTH_MAIN_OBJECT = 40;
+const int HEIGHT_MAIN_OBJECT = 40;
+
 #include "Base_Object.h"
 #include "Common_Function.h"
-
-#define WIDTH_MAIN_OBJECT 40;
-#define HEIGHT_MAIN_OBJECT 40;
 
 class MainObject : public BaseObject {
 private:

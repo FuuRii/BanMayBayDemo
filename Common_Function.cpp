@@ -33,7 +33,7 @@ void SDL_CommonFunc::CleanUp() {
 	SDL_FreeSurface(g_screen);
 	printf("Success : Giai phong g_screen\n");
 	SDL_FreeSurface(g_bg);
-	//printf("Success : Giai phong g_background\n");
+	printf("Success : Giai phong g_background\n");
 	//SDL_FreeSurface(g_plane);
-	printf("Success : Giai phong g_plane\n");
+	//printf("Success : Giai phong g_plane\n");*/
 }

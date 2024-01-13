@@ -43,8 +43,8 @@ int main(int argc, char* argv[]) {
 	else {
 		printf("Success : Load background thanh cong %d\n", g_bg->format->BitsPerPixel);
 	}
-	SDL_CommonFunc::ApplySurface(g_bg, g_screen, 0, 0);
-	printf("Success : Apply background thanh cong \n");
+	
+	/*printf("Success : Apply background thanh cong \n");*/
 
 
 	MainObject plane_object;
@@ -53,8 +53,6 @@ int main(int argc, char* argv[]) {
 	if (ret == false) {
 		return 0;
 	}
-	plane_object.Show(g_screen);
-
 
 	while (!is_quit) {
 		//neu chua bam nut thoat thi chuong trinh chua duoc phep thoat
@@ -63,17 +61,17 @@ int main(int argc, char* argv[]) {
 				is_quit = true;
 				break;
 			}
-			else {
-				int n_ranx = rand() % 1000;
-				printf("Success : %d\n", n_ranx);
-
-			}
+			plane_object.HanleInputAction(g_event);
 		}
+		SDL_CommonFunc::ApplySurface(g_bg, g_screen, 0, 0);
+		plane_object.Show(g_screen);
+		plane_object.HandleMove();
 
 		if (SDL_Flip(g_screen) == -1) {
 			exit(-1);
 		}
-
+		/*int n_ranx = rand() % 1000;
+		printf("Success : %d\n", n_ranx);*/
 	}
 	SDL_CommonFunc::CleanUp();
 	SDL_QUIT;
